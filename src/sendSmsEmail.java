@@ -8,7 +8,7 @@ public class sendSmsEmail {
         a.setFirstName("John");
         a.setSirName("Doe");
         a.setEmail("a@b.com");
-        a.setPhoneNumber("05320000000");
+        a.setPhoneNumber("05325320000");
         System.out.println(a.toString());
 
 

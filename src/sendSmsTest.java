@@ -32,6 +32,13 @@ class sendSmsTest {
 
     @Test
     void it_should_return_false_if_user_and_message_is_Null(){
-        assert(sendEmail.send(null, null)).equals(false);
+        assert(sendSms.send(null, null)).equals(false);
+    }
+
+    @Test
+    void it_should_return_false_if_phone_number_starts_with_zero(){
+        user testUser = new user();
+        testUser.setPhoneNumber("05325320000");
+        assert(sendSms.send(testUser, "Hello")).equals(false);
     }
 }
