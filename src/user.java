@@ -96,7 +96,13 @@ public class user {
                 "firstName='" + firstName + '\'' +
                 ", sirName='" + sirName + '\'' +
                 ", email='" + email + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", maxEmailLimit=" + maxEmailLimit +
+                ", maxSmsLimit=" + maxSmsLimit +
+                ", emailCounter=" + emailCounter +
+                ", smsCounter=" + smsCounter +
+                ", isEmailLimitExceeded=" + isEmailLimitExceeded +
+                ", isSmsLimitExceeded=" + isSmsLimitExceeded +
                 '}';
     }
 }
