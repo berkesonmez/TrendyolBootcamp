@@ -1,0 +1,38 @@
+import com.sun.tools.javac.util.Assert;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class sendSmsTest {
+    @Test
+    void send() {
+    }
+
+    @Test
+    void it_should_return_false_if_message_is_Null() {
+        user testUser = new user();
+        assert(sendSms.send(testUser,null)).equals(false);
+    }
+
+    @Test
+    void it_should_return_false_if_message_is_empty() {
+        user testUser = new user();
+        assert(sendSms.send(testUser, "")).equals(false);
+    }
+
+    @Test
+    void it_should_return_false_if_user_is_Null(){
+        assert(sendSms.send(null, "Hello")).equals(false);
+    }
+
+    @Test
+    void it_should_return_false_if_user_email_address_is_Null(){
+        user testUser = new user();
+        assert(sendSms.send(testUser, "Hello")).equals(false);
+    }
+
+    @Test
+    void it_should_return_false_if_user_and_message_is_Null(){
+        assert(sendEmail.send(null, null)).equals(false);
+    }
+}
